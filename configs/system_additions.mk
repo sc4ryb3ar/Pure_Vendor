@@ -90,3 +90,6 @@ PRODUCT_COPY_FILES += \
     vendor/pure/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     vendor/pure/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
+
+# include definitions for SDCLANG
+include device/qcom/common/sdclang/sdclang.mk
