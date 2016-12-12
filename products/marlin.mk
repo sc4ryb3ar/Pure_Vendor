@@ -12,16 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Add Stock Lollipop bootanimation based on device
-ifneq ($(filter angler,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter bullhead,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter marlin,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
-endif
+# Include pure telephony configuration
+include vendor/pure/configs/pure_phone.mk
+
+# Inherit AOSP device configuration for marlin
+$(call inherit-product, device/google/marlin/aosp_marlin.mk)
+
+# Override AOSP build properties
+PRODUCT_NAME := marlin
+PRODUCT_BRAND := google
+PRODUCT_DEVICE := marlin
+PRODUCT_MODEL := Pixel XL
+PRODUCT_MANUFACTURER := Google
+
+# Device Fingerprint
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=marlin \
+    BUILD_FINGERPRINT=google/marlin/marlin:7.1.2/NJH47D/4045516:user/release-keys \
+    PRIVATE_BUILD_DESC="marlin-user 7.1.2 NJH47D 4045516 release-keys"
