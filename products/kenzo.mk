@@ -18,6 +18,9 @@ include vendor/pure/configs/pure_phone.mk
 # Inherit AOSP device configuration for kenzo
 $(call inherit-product, device/xiaomi/kenzo/aosp_kenzo.mk)
 
+# Inherit arm64 phone gapps
+$(call inherit-product-if-exists, vendor/gapps/arm64-phone-gapps.mk)
+
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
