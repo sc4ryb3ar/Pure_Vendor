@@ -1,6 +1,5 @@
 # Telephony packages
 PRODUCT_PACKAGES += \
-    messaging \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
