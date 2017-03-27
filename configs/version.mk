@@ -17,7 +17,16 @@ ifndef PURE_BUILD_TYPE
     PURE_BUILD_TYPE := UNOFFICIAL
 endif
 
+# GAPPS
+ifndef WITH_GAPPS
+    WITH_GAPPS := true
+endif
+
+ifeq ($(WITH_GAPPS),true)
 PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE)
+else
+PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE)-WITHOUT-GAPPS
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.pure.version=$(PURE_VERSION)
