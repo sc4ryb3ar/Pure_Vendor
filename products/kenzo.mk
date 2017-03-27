@@ -21,6 +21,12 @@ $(call inherit-product, device/xiaomi/kenzo/aosp_kenzo.mk)
 ifeq ($(WITH_GAPPS),true)
 # Inherit arm64 phone gapps
 $(call inherit-product-if-exists, vendor/gapps/arm64-phone-gapps.mk)
+else
+# Misc packages
+PRODUCT_PACKAGES += \
+    DeskClock \
+    messaging \
+    SoundRecorder
 endif
 
 # Set those variables here to overwrite the inherited values.
