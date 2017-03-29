@@ -1,6 +1,7 @@
 # Telephony packages
 PRODUCT_PACKAGES += \
-    telephony-ext
+    telephony-ext \
+    ims-ext-common
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
