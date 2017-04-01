@@ -25,7 +25,11 @@
 #include <time.h>
 #include <unistd.h>
 
-#include <cutils/android_reboot.h>
+#ifdef ANDROID_RB_RESTART
+#include "cutils/android_reboot.h"
+#else
+#include <sys/reboot.h>
+#endif
 #include <cutils/klog.h>
 #include <cutils/misc.h>
 #include <cutils/uevent.h>
@@ -283,7 +287,11 @@ static void *alarm_thread(void *)
         goto err;
 
     LOGI("Exit from power off charging, reboot the phone!\n");
-    android_reboot(ANDROID_RB_RESTART, 0, 0);
+    #if defined(ANDROID_RB_RESTART)
+        android_reboot(ANDROID_RB_RESTART, 0, 0);
+    #else
+        reboot(RB_AUTOBOOT);
+    #endif
 
 err:
     LOGE("Exit from alarm thread\n");
