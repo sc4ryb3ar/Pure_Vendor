@@ -34,7 +34,6 @@ PRODUCT_PACKAGES += \
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.cm
 PRODUCT_PACKAGES += \
     charger_res_images \
     cm_charger_res_images \
