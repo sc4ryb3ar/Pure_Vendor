@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+WITH_GOOGLE_CAMERA := false
+WITH_CM_CHARGER := true
+
 # Include pure telephony configuration
 include vendor/pure/configs/pure_phone.mk
 
@@ -19,7 +22,6 @@ include vendor/pure/configs/pure_phone.mk
 $(call inherit-product, device/motorola/surnia/aosp_surnia.mk)
 
 ifeq ($(WITH_GAPPS),true)
-WITH_GOOGLE_CAMERA := false
 # Inherit arm phone gapps
 $(call inherit-product-if-exists, vendor/gapps/arm-phone-gapps.mk)
 else
