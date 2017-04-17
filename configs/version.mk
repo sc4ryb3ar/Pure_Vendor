@@ -12,20 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#PureNexus versioning
-ifndef PURE_BUILD_TYPE
-    PURE_BUILD_TYPE := UNOFFICIAL
-endif
-
 # GAPPS
 ifndef WITH_GAPPS
     WITH_GAPPS := true
 endif
 
 ifeq ($(WITH_GAPPS),true)
-PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE)
+PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-MOD
 else
-PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-$(PURE_BUILD_TYPE)-WITHOUT-GAPPS
+PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-MOD-NO-GAPPS
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
