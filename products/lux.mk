@@ -29,7 +29,9 @@ else
 PRODUCT_PACKAGES += \
     DeskClock \
     messaging \
-    SoundRecorder
+    SoundRecorder \
+    Calendar \
+    Gallery2
 endif
 
 # Set those variables here to overwrite the inherited values.
