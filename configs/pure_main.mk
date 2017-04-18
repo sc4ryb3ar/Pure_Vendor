@@ -33,7 +33,20 @@ PRODUCT_PACKAGES += \
     Busybox \
     ThemeInterfacer \
     OmniStyle \
-    Turbo
+    Turbo \
+    DeskClock \
+    messaging \
+    SoundRecorder \
+    Calendar \
+    Gallery2
+
+# More Derps
+PRODUCT_PACKAGES += \
+    e2fsck \
+    mke2fs \
+    tune2fs \
+    powertop \
+    libbthost_if
 
 # Custom off-mode charger
 ifneq ($(WITH_CM_CHARGER),false)
