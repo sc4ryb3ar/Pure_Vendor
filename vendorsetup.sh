@@ -5,3 +5,4 @@ add_lunch_combo A6020-user
 add_lunch_combo lux-user
 add_lunch_combo condor-user
 add_lunch_combo victara-user
+add_lunch_combo hydrogen-user
