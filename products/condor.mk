@@ -18,13 +18,6 @@ include vendor/pure/configs/pure_phone.mk
 # Inherit AOSP device configuration for condor.
 $(call inherit-product, device/motorola/victara/aosp_condor.mk)
 
-WITH_GOOGLE_CAMERA := false
-WITH_GOOGLE_CHROME := false
-WITH_GOOGLE_KEYBOARD := false
-
-# Inherit arm phone gapps
-$(call inherit-product-if-exists, vendor/gapps/arm-phone-gapps.mk)
-
 # Override AOSP build properties
 PRODUCT_NAME := condor
 PRODUCT_BRAND := motorola

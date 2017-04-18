@@ -12,16 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# GAPPS
-ifndef WITH_GAPPS
-    WITH_GAPPS := true
-endif
-
-ifeq ($(WITH_GAPPS),true)
 PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-MOD
-else
-PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d)-MOD-NO-GAPPS
-endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.pure.version=$(PURE_VERSION)

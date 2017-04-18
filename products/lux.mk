@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-WITH_GOOGLE_CAMERA := false
 WITH_CM_CHARGER := true
 
 # Include pure telephony configuration
@@ -20,19 +19,6 @@ include vendor/pure/configs/pure_phone.mk
 
 # Inherit AOSP device configuration for lux
 $(call inherit-product, device/motorola/lux/aosp_lux.mk)
-
-ifeq ($(WITH_GAPPS),true)
-# Inherit arm phone gapps
-$(call inherit-product-if-exists, vendor/gapps/arm-phone-gapps.mk)
-else
-# Misc packages
-PRODUCT_PACKAGES += \
-    DeskClock \
-    messaging \
-    SoundRecorder \
-    Calendar \
-    Gallery2
-endif
 
 # Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := lux
