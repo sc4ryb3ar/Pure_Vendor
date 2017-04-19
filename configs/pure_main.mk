@@ -16,6 +16,16 @@
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/pure/overlay/common
 
+ifndef IS_ARM64
+IS_ARM64 := false
+endif
+
+ifeq ($(IS_ARM64),true)
+TARGET_ARCH := arm64
+else
+TARGET_ARCH := arm
+endif
+
 # Inherit prebuilt apps
 $(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
 
