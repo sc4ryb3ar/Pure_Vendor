@@ -13,6 +13,7 @@
 # limitations under the License.
 
 WITH_CM_CHARGER := true
+IS_ARM64 := true
 
 # Include pure telephony configuration
 include vendor/pure/configs/pure_phone.mk
