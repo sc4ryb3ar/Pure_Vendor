@@ -1,8 +1,8 @@
-add_lunch_combo kenzo-user
-add_lunch_combo osprey-user
-add_lunch_combo surnia-user
-add_lunch_combo A6020-user
-add_lunch_combo lux-user
-add_lunch_combo condor-user
-add_lunch_combo victara-user
-add_lunch_combo hydrogen-user
+add_lunch_combo kenzo-userdebug
+add_lunch_combo osprey-userdebug
+add_lunch_combo surnia-userdebug
+add_lunch_combo A6020-userdebug
+add_lunch_combo lux-userdebug
+add_lunch_combo condor-userdebug
+add_lunch_combo victara-userdebug
+add_lunch_combo hydrogen-userdebug
