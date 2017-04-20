@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-WITH_CM_CHARGER := true
 IS_ARM64 := true
 
 # Include pure telephony configuration
