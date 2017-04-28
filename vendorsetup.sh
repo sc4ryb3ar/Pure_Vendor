@@ -8,3 +8,4 @@ add_lunch_combo victara-userdebug
 add_lunch_combo hydrogen-userdebug
 add_lunch_combo kipper-userdebug
 add_lunch_combo otus-userdebug
+add_lunch_combo oneplus3-userdebug
