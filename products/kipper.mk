@@ -22,7 +22,7 @@ include vendor/pure/configs/pure_phone.mk
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := aosp_kipper
+PRODUCT_NAME := kipper
 BOARD_VENDOR := wileyfox
 PRODUCT_DEVICE := kipper
 
