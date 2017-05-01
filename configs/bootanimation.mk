@@ -55,3 +55,7 @@ ifneq ($(filter oneplus3,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
 endif
+ifneq ($(filter otus,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimatibootanimat
+endif
