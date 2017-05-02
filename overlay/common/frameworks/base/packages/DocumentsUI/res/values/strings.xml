@@ -21,4 +21,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="downloads_label">"Documents"</string>
+
+    <!-- The duration in seconds to wait before the dismiss buttons are shown. -->
+    <integer name="recents_task_bar_dismiss_delay_seconds">0</integer>
+
 </resources>
