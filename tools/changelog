@@ -32,7 +32,7 @@ k=$(expr $i - 1)
         echo >> $Changelog;
 done
 
-sed -i 's/project/   */g' $Changelog
+sed -i 's/project/\n   */g' $Changelog
 
 cp $Changelog $OUT/system/etc/
 cp $Changelog $OUT/
