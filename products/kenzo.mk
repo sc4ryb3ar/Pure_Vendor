@@ -35,3 +35,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V8.1.6.0.MHOMIDI:user/release-keys \
     PRIVATE_BUILD_DESC="kenzo-user 6.0.1 MMB29M V8.1.6.0.MHOMIDI release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/kenzo.json
