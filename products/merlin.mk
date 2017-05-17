@@ -24,3 +24,7 @@ PRODUCT_NAME := merlin
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := merlin
+
+# OTA Pure Nexus
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/merlin.json
