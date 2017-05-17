@@ -24,3 +24,7 @@ PRODUCT_NAME := osprey
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := osprey
+
+# OTA Pure Nexus
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/osprey.json
