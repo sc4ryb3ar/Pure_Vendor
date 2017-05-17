@@ -13,52 +13,15 @@
 # limitations under the License.
 
 # Add Stock Lollipop bootanimation based on device
-ifneq ($(filter kenzo,$(TARGET_PRODUCT)),)
+ifneq ($(filter kenzo victara lux hydrogen kipper oneplus3,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter osprey,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
-endif
-
-ifneq ($(filter surnia,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter lux,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter victara,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter condor,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter hydrogen,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter kipper,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter oneplus3,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter otus,$(TARGET_PRODUCT)),)
+ifneq ($(filter osprey surnia condor otus merlin,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
 endif
 ifneq ($(filter axon7,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter merlin,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
 endif
