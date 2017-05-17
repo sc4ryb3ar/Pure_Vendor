@@ -58,3 +58,7 @@ ifneq ($(filter axon7,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
 endif
+ifneq ($(filter merlin,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
+endif
