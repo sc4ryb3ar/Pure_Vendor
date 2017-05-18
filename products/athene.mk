@@ -15,12 +15,14 @@
 # Include pure telephony configuration
 include vendor/pure/configs/pure_phone.mk
 
-# Inherit AOSP device configuration for potter
-$(call inherit-product, device/motorola/potter/aosp_potter.mk)
+# Inherit AOSP device configuration for athene
+$(call inherit-product, device/motorola/athene/aosp_athene.mk)
+
+IS_ARM := true
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_DEVICE := potter
-PRODUCT_NAME := potter
+PRODUCT_DEVICE := athene
+PRODUCT_NAME := athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
-PRODUCT_RELEASE_NAME := potter
+PRODUCT_RELEASE_NAME := athene

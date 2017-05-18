@@ -9,3 +9,6 @@ add_lunch_combo kipper-userdebug
 add_lunch_combo otus-userdebug
 add_lunch_combo oneplus3-userdebug
 add_lunch_combo axon7-userdebug
+add_lunch_combo athene-userdebug
+add_lunch_combo addison-userdebug
+add_lunch_combo potter-userdebug
