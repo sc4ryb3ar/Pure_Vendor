@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Add Stock Lollipop bootanimation based on device
-ifneq ($(filter kenzo victara lux hydrogen kipper oneplus3,$(TARGET_PRODUCT)),)
+ifneq ($(filter kenzo victara lux hydrogen kipper oneplus3 potter,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
 endif
