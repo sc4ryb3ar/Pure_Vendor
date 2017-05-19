@@ -33,3 +33,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # PureNexus OTA
 PRODUCT_PACKAGES += \
     PureOTA
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.build.date=$(shell date +%Y%m%d)
