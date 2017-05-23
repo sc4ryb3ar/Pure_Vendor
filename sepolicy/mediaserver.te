@@ -1,4 +1,0 @@
-# Viper audio support
-allow mediaserver mediaserver_tmpfs:file { read write execute };
-# For camera
-allow mediaserver media_rw_data_file:file write;
