@@ -31,3 +31,5 @@ PRODUCT_RELEASE_NAME := s2
 
 TARGET_VENDOR := leeco
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/s2.json
