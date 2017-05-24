@@ -21,3 +21,6 @@ PRODUCT_MANUFACTURER := Leeco
 PRODUCT_BRAND := letv
 PRODUCT_GMS_CLIENTID_BASE := android-letv
 TARGET_VENDOR := leeco
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/x2.json
