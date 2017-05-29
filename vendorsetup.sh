@@ -2,6 +2,7 @@ add_lunch_combo addison-userdebug
 add_lunch_combo athene-userdebug
 add_lunch_combo axon7-userdebug
 add_lunch_combo condor-userdebug
+add_lunch_combo falcon-userdebug
 add_lunch_combo hydrogen-userdebug
 add_lunch_combo kenzo-userdebug
 add_lunch_combo kipper-userdebug
