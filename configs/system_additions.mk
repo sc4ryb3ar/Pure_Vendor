@@ -34,4 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     PureOTA
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.build.date=$(shell date +%Y%m%d)
+    ro.ota.build.date=$(shell date +%Y%m%d_%H%M%S)
+
+# Device specific
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProjectMod/OTA_server/master/pme.json
