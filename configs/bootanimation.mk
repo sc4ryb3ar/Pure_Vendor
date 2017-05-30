@@ -17,7 +17,7 @@ ifneq ($(filter addison athene hydrogen kenzo kipper lux oneplus3 onyx potter s2
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter condor ido merlin osprey otus surnia,$(TARGET_PRODUCT)),)
+ifneq ($(filter condor falcon ido merlin osprey otus surnia,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
 endif
