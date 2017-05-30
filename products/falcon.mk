@@ -32,3 +32,6 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=falcon \
     BUILD_FINGERPRINT=motorola/falcon_reteu/falcon_umts:5.1/LPB23.13-56/56:user/release-keys
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/falcon.json
