@@ -91,5 +91,9 @@ PRODUCT_COPY_FILES += \
     vendor/pure/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 endif
 
-# include definitions for SDCLANG
-include device/qcom/common/sdclang/sdclang.mk
+# Include SDCLANG definitions if it is requested and available
+ifeq ($(HOST_OS),linux)
+    ifneq ($(wildcard vendor/qcom/sdclang-3.8/),)
+        include vendor/pure/sdclang/sdclang.mk
+    endif
+endif
