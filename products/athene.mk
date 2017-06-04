@@ -26,3 +26,7 @@ PRODUCT_NAME := athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
+
+# OTA Pure Nexus
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/athene.json
