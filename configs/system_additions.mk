@@ -34,4 +34,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     PureOTA
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.build.date=$(shell date +%Y%m%d)
+    ro.ota.build.date=$(shell date +%Y%m%d_%H%M%S)
