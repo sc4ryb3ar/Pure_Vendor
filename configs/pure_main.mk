@@ -66,6 +66,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.extractor-plugin=libffmpeg_extractor.so   
 endif
 
+# Storage manager
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.storage_manager.enabled=true
+
 # DU Utils Library
 PRODUCT_PACKAGES += \
     org.dirtyunicorns.utils
