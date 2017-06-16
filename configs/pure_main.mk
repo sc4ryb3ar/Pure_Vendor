@@ -53,6 +53,18 @@ PRODUCT_PACKAGES += \
     tune2fs \
     powertop \
     libbthost_if
+    
+# Stagefright FFMPEG plugin
+ifeq ($(WITH_FFMPEG),true)
+PRODUCT_PACKAGES += \
+    libffmpeg_extractor \
+    libffmpeg_omx \
+    media_codecs_ffmpeg.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so   
+endif
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
