@@ -30,10 +30,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
     
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-# Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif   
+#ifneq ($(TARGET_BUILD_VARIANT),eng)
+## Enable ADB authentication
+#ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+#endif   
 
 # Set cache location
 ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
