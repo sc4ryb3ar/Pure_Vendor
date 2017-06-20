@@ -85,3 +85,14 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf
 endif
+
+# Proprietary latinime libs needed for Keyboard swyping
+ifneq ($(filter arm64,$(TARGET_ARCH)),)
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so \
+    vendor/pure/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinimegoogle.so \
+    vendor/pure/prebuilt/lib64/libjni_latinime.so:system/lib64/libjni_latinime.so
+endif
