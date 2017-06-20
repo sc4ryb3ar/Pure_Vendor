@@ -52,12 +52,31 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     Gallery2
 
-# More Derps
+# Misc packages
 PRODUCT_PACKAGES += \
+    BluetoothExt \
+    LatinIME \
+    libemoji \
     e2fsck \
     mke2fs \
     tune2fs \
     powertop \
+    bash \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
+    mkfs.ntfs \
+    fsck.ntfs \
+    mount.ntfs \
+    gdbserver \
+    micro_bench \
+    oprofiled \
+    sqlite3 \
+    strace \
+    libsepol \
     libbthost_if
     
 ifeq ($(DEFAULT_ROOT_METHOD),magisk)
