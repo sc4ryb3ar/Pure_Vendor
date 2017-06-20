@@ -15,15 +15,22 @@
 # Google property overides
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
+    ro.com.google.clientidbase=android-google \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
-    ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-    ro.setupwizard.rotation_locked=true
+    ro.setupwizard.rotation_locked=true \
+    ro.build.selinux=0 \
+    persist.sys.dun.override=0 \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so \
+    ro.substratum.verified=true \
+    ro.opa.eligible_device=true \
+    persist.sys.recovery_update=false   
 
 # Camera Effects for devices without a vendor partition
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
