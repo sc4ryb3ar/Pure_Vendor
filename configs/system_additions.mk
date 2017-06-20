@@ -29,6 +29,23 @@ PRODUCT_COPY_FILES += \
 # Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
+    
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+# Enable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+endif   
+
+# Set cache location
+ifeq ($(BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE),)
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.device.cache_dir=/data/cache
+else
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.device.cache_dir=/cache
+endif
+
+# Recommend using the non debug dexpreopter
+USE_DEX2OAT_DEBUG ?= false
 
 # PureNexus OTA
 PRODUCT_PACKAGES += \
