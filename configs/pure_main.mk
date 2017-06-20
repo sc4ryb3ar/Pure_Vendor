@@ -32,6 +32,9 @@ $(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
 # Main Required Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
+    Phonograph \
+    messaging \
+    LiveWallpapers \
     LiveWallpapersPicker
 
 # Include explicitly to work around Facelock issues
@@ -44,6 +47,9 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     Turbo \
+    PixelLauncher \
+    WallpaperPickerGoogle \
+    ViaBrowser \
     Gallery2
 
 # More Derps
@@ -60,10 +66,6 @@ PRODUCT_PACKAGES += \
     libffmpeg_extractor \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
-
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    media.sf.omx-plugin=libffmpeg_omx.so \
-#    media.sf.extractor-plugin=libffmpeg_extractor.so   
 endif
 
 # Storage manager
