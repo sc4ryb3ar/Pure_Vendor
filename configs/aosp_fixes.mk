@@ -31,6 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.substratum.verified=true \
     ro.opa.eligible_device=true \
     persist.sys.recovery_update=false   
+    ro.com.google.ime.theme_id=5
 
 # Camera Effects for devices without a vendor partition
 ifneq ($(filter shamu,$(TARGET_PRODUCT)),)
