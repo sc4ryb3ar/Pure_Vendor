@@ -23,3 +23,6 @@ PRODUCT_MANUFACTURER := ZUK
 PRODUCT_BRAND := ZUK
 PRODUCT_GMS_CLIENTID_BASE := android-zuk
 TARGET_VENDOR := zuk
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.ota.manifest=https://raw.githubusercontent.com/PureNexusProject-Mod/OTA_server/master/z2_plus.json
