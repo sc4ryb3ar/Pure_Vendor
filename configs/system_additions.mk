@@ -53,5 +53,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.ota.build.date=$(shell date +%Y%m%d_%H%M%S)
 
+# Allow recording ADB logcat during boot phase
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.service.adb.enable=1
+
 # Speed up compiling time
 EXCLUDE_SYSTEMUI_TESTS := true
