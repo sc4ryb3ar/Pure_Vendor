@@ -1,4 +1,4 @@
-# Copyright (C) 2017 The Pure Nexus Project
+# Copyright (C) 2017 Pure Fusion OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ ifneq ($(filter condor falcon ido merlin osprey otus surnia,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter axon7 x2,$(TARGET_PRODUCT)),)
+ifneq ($(filter axon7 x2 pme,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/pure/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
 endif       
