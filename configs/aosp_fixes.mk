@@ -27,11 +27,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.rotation_locked=true \
     ro.build.selinux=0 \
     persist.sys.dun.override=0 \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so \
     ro.substratum.verified=true \
     ro.opa.eligible_device=true \
-    persist.sys.recovery_update=false   
+    persist.sys.recovery_update=false
     ro.com.google.ime.theme_id=5
 
 # Camera Effects for devices without a vendor partition
