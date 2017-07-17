@@ -1,4 +1,4 @@
-# Copyright (C) 2017 Pure Fusion OS
+# Copyright (C) 2017 PureFusionOS ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,19 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Security Enhanced Linux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+PRODUCT_PACKAGES += \
+        PureFusionOTA \
+        libbypass
 
-# Rescue Party
+ifeq ($(WITH_OFFICIALOTA),true)
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.disable_rescue=true
-
-# PureFusionOS OTA
-$(call inherit-product-if-exists, vendor/pure/configs/ota.mk)
-
-# Allow recording ADB logcat during boot phase
-PRODUCT_PROPERTY_OVERRIDES += \
-		 ro.adb.secure=0 \
-		 ro.secure=0 \
-		 persist.service.adb.enable=1
+        ro.ota.romname=PureFusionOS \
+        ro.ota.version=$(shell date +"%Y%m%d") \
+        ro.ota.manifest=https://raw.githubusercontent.com/PureFusionOS/PureFusionOTA_SERVER/n-mr2/$(shell echo "$(TARGET_PRODUCT)".xml)
+endif
