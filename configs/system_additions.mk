@@ -47,6 +47,9 @@ endif
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
+# PureFusionOS OTA
+$(call inherit-product-if-exists, vendor/pure/configs/ota.mk)
+
 # Allow recording ADB logcat during boot phase
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
