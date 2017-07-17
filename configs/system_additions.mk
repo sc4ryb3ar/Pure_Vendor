@@ -47,12 +47,6 @@ endif
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
 
-# PureNexus OTA
-PRODUCT_PACKAGES += \
-    PureOTA
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ota.build.date=$(shell date +%Y%m%d_%H%M%S)
-
 # Allow recording ADB logcat during boot phase
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
