@@ -13,8 +13,8 @@
 # limitations under the License.
 
 
-# Inherit AOSP device configuration for pme
-$(call inherit-product, device/htc/pme/aosp_pme.mk)
+# Inherit AOSP device configuration for axon7
+$(call inherit-product, device/zte/axon7/aosp_axon7.mk)
 
 # Set those variables here to overwrite the inherited values.
 
@@ -25,5 +25,5 @@ PRODUCT_MODEL := ZTE AXON 7
 PRODUCT_MANUFACTURER := ZTE
 PRODUCT_RELEASE_NAME := axon7
 
-TARGET_VENDOR := ZTE
+TARGET_VENDOR := zte
 
