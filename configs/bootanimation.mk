@@ -1,4 +1,4 @@
-# Copyright (C) 2017 Pure Fusion OS
+# Copyright (C) 2017 PureFusionOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,16 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Add Stock Lollipop bootanimation based on device
-ifneq ($(filter addison athene hydrogen kenzo kipper lux oneplus3 onyx potter s2 victara z2_plus,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1080.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter condor falcon ido merlin osprey otus surnia,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/720.zip:system/media/bootanimation.zip
-endif
-ifneq ($(filter axon7 x2 pme,$(TARGET_PRODUCT)),)
-    PRODUCT_COPY_FILES += \
-        vendor/pure/prebuilt/bootanimation/1440.zip:system/media/bootanimation.zip
-endif       
+# BootAnimation Handler:
+PRODUCT_PACKAGES += \
+    bootanimation.zip
+
