@@ -50,6 +50,10 @@ USE_DEX2OAT_DEBUG ?= false
 # PureFusionOS OTA
 $(call inherit-product-if-exists, vendor/pure/configs/ota.mk)
 
+# Needs for MTP Dirty Hack
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
+
 # Allow recording ADB logcat during boot phase
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
