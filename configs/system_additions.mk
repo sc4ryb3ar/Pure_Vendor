@@ -28,7 +28,7 @@ PRODUCT_COPY_FILES += \
 
 # Pure-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/pure/prebuilt/etc/init.purenexus.rc:root/init.purenexus.rc
+    vendor/pure/prebuilt/etc/init.fusion.rc:root/init.fusion.rc
 
 # Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \
