@@ -50,7 +50,8 @@ PRODUCT_PACKAGES += \
     PixelLauncher \
     WallpaperPickerGoogle \
     ViaBrowser \
-    Gallery2
+    Gallery2 \
+	MatLog
 
 # Misc packages
 PRODUCT_PACKAGES += \
