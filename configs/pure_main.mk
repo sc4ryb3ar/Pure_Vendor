@@ -26,6 +26,11 @@ else
 TARGET_ARCH := arm
 endif
 
+# Qualcomm specific packages
+ifneq ($(TARGET_USES_AOSP_CAMERA),true)
+PRODUCT_PACKAGES += SnapdragonCamera
+endif
+
 # Inherit prebuilt apps
 $(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
 
