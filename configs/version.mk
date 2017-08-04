@@ -20,4 +20,4 @@ endif
 PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d_%H%M%S)-$(PURE_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.pure.version=$(PURE_VERSION)
+    ro.fusion.version=$(PURE_VERSION)
