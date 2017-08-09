@@ -22,6 +22,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/pure/prebuilt/bin/sysinit:system/bin/sysinit
 
+# ROM Statistics
+PRODUCT_PACKAGES += \
+    FusionStats
+
 # Pure-specific init file
 PRODUCT_COPY_FILES += \
     vendor/pure/prebuilt/etc/init.fusion.rc:root/init.fusion.rc
