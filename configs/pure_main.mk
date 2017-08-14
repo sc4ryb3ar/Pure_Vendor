@@ -52,7 +52,6 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     Turbo \
-    PixelLauncher \
     WallpaperPickerGoogle \
     ViaBrowser \
     Gallery2 \
