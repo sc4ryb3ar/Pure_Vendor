@@ -37,6 +37,7 @@ $(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
 # Main Required Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
+    DeskClock \
     Phonograph \
     messaging \
     LiveWallpapers \
@@ -55,7 +56,7 @@ PRODUCT_PACKAGES += \
     WallpaperPickerGoogle \
     ViaBrowser \
     Gallery2 \
-	MatLog
+    MatLog
 
 # Misc packages
 PRODUCT_PACKAGES += \
