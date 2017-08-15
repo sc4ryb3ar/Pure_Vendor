@@ -36,3 +36,7 @@ PRODUCT_BRAND := OnePlus
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 TARGET_VENDOR := oneplus
+
+# Pure Fusion OS OnePlus3 Maintainer
+ PRODUCT_BUILD_PROP_OVERRIDES += \
+ DEVICE_MAINTAINERS="siankatabg"
