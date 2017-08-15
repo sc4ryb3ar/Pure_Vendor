@@ -17,7 +17,6 @@ fi
 . build/envsetup.sh && breakfast $DEVICECODENAME
 
 source config.conf
-export BUILD_DATE=$(date +%Y%m%d)
 
 if [ $MAKECLEAN -eq 1 ]
 then
@@ -38,6 +37,7 @@ export CHANGELOG=$(ls |grep -m 1 $ROMPREFIX*changelog.txt)
 export FILESIZE=$(stat -c%s $FILENAME)
 export MD5=$(md5sum $FILENAME | awk '{ print $1 }')
 export OTA_VERSION=$(echo ${FILENAME%.*})
+export OTA_NUMBER=$(cat $OUT/system/build.prop |grep ro.ota.version=* | awk -F'=' '{print $2}')
 
 cd $ANDROID_BUILD_DIR
 
