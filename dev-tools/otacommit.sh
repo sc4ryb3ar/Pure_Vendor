@@ -15,7 +15,7 @@ sed -i -- 's/'"<VersionName"'.\+<\/\VersionName>/'"\<VersionName>$OTA_VERSION<\/
 sed -i -- 's/'"$ROMPREFIX\_"'.\+zip/'"$FILENAME"'/g' $OTAXML
 sed -i -- 's/'"$ROMPREFIX\_"'.\+txt/'"$CHANGELOG"'/g' $OTAXML
 sed -i -- 's/'"<FileSize"'.\+<\/\FileSize>/'"\<FileSize type=\"\integer\"\>$FILESIZE<\/\FileSize>"'/g' $OTAXML
-sed -i -- 's/'"<VersionNumber"'.\+<\/\VersionNumber>/'"\<VersionNumber type=\"\integer\"\>$BUILD_DATE<\/\VersionNumber>"'/g' $OTAXML
+sed -i -- 's/'"<VersionNumber"'.\+<\/\VersionNumber>/'"\<VersionNumber type=\"\integer\"\>$OTA_NUMBER<\/\VersionNumber>"'/g' $OTAXML
 
 sed -i -- 's/'"<CheckMD5"'.\+<\/\CheckMD5>/'"\<CheckMD5>$MD5<\/\CheckMD5>"'/g' $OTAXML
 echo " "
