@@ -36,11 +36,10 @@ $(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
     DeskClock \
-    messaging \
-    LiveWallpapers \
-    LiveWallpapersPicker
+    Launcher3 \
+    LiveWallpapersPicker \
+    messaging
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += \
@@ -60,7 +59,6 @@ PRODUCT_PACKAGES += \
 # Misc packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    LatinIME \
     libemoji \
     e2fsck \
     mke2fs \
