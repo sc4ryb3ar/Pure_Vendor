@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     DeskClock \
     Launcher3 \
     LiveWallpapersPicker \
-    messaging
+    messaging \
+    WallpaperPicker
 
 # Include explicitly to work around Facelock issues
 PRODUCT_PACKAGES += \
