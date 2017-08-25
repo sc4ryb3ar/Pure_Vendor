@@ -26,11 +26,30 @@ else
 TARGET_ARCH := arm
 endif
 
-# Qualcomm specific packages
-ifneq ($(TARGET_USES_AOSP_CAMERA),true)
+# Cameras
+ifeq ($(TARGET_USES_OP_CAMERA),true)
+   ifneq ($(BOARD_VENDOR),oneplus)
 PRODUCT_PACKAGES += \
-    GoogleCamera \
     OnePlusCamera
+   else
+PRODUCT_PACKAGES += \
+    OnePlusCameraOP
+PRODUCT_COPY_FILES += \
+    vendor/pure/prebuilt/lib64/libopbaselib.so:system/lib64/libopbaselib.so \
+    vendor/pure/prebuilt/lib64/libopcamera.so:system/lib64/libopcamera.so \
+    vendor/pure/prebuilt/lib64/libopcameralib.so:system/lib64/libopcameralib.so \
+    vendor/pure/prebuilt/lib64/libfilter-sdk.so:system/lib64/libfilter-sdk.so
+   endif
+endif
+
+ifeq ($(TARGET_USES_GOOGLE_CAMERA),true)
+PRODUCT_PACKAGES += \
+    GoogleCamera
+endif
+
+ifeq ($(TARGET_USES_SNAP_CAMERA),true)
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
 endif
 
 # Inherit prebuilt apps
