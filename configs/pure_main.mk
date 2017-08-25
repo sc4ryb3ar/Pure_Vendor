@@ -28,7 +28,9 @@ endif
 
 # Qualcomm specific packages
 ifneq ($(TARGET_USES_AOSP_CAMERA),true)
-PRODUCT_PACKAGES += SnapdragonCamera
+PRODUCT_PACKAGES += \
+    GoogleCamera \
+    OnePlusCamera
 endif
 
 # Inherit prebuilt apps
