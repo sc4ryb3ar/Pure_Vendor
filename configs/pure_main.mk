@@ -43,7 +43,7 @@ $(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
 # Main Required Packages
 PRODUCT_PACKAGES += \
     DeskClock \
-    Launcher3 \
+    Launcher3-azaidi \
     LiveWallpapersPicker \
     messaging \
     WallpaperPicker
