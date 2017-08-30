@@ -58,7 +58,6 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     OmniStyle \
     Turbo \
-    PixelLauncher \
     WallpaperPickerGoogle \
     Gallery2 \
     MatLog
