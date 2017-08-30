@@ -23,7 +23,7 @@ endif
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
+    Launcher3-azaidi \
 		Turbo \
     LiveWallpapersPicker
 
