@@ -24,17 +24,6 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3
 include $(BUILD_PREBUILT)
 
-#Pixel WallpaperPicker
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := WallpaperPickerGoogle
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
-LOCAL_CERTIFICATE := platform
-LOCAL_MODULE_CLASS := APPS
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-include $(BUILD_PREBUILT)
-
 include $(CLEAR_VARS)
 LOCAL_MODULE := MagiskManager
 LOCAL_SRC_FILES := MagiskManager.apk
