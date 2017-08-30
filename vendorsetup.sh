@@ -7,3 +7,6 @@ add_lunch_combo axon7-eng
 add_lunch_combo oneplus3-userdebug
 add_lunch_combo oneplus3-user
 add_lunch_combo oneplus3-eng
+add_lunch_combo cheeseburger-userdebug
+add_lunch_combo cheeseburger-user
+add_lunch_combo cheeseburger-eng
