@@ -87,28 +87,6 @@ PRODUCT_PACKAGES += \
     libsepol \
     libbthost_if
 
-ifeq ($(DEFAULT_ROOT_METHOD),magisk)
-# Magisk Manager
-PRODUCT_PACKAGES += \
-    MagiskManager
-
-# Copy Magisk zip
-PRODUCT_COPY_FILES += \
-    vendor/pure/prebuilt/zip/magisk.zip:system/addon.d/magisk.zip
-
-else ifeq ($(DEFAULT_ROOT_METHOD),supersu)
-# SuperSU
-ifeq ($(BOARD_VENDOR),sony)
-PRODUCT_COPY_FILES += \
-    vendor/pure/prebuilt/etc/UPDATE-SuperSU-2.52.zip:system/addon.d/UPDATE-SuperSU.zip \
-    vendor/pure/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-else
-PRODUCT_COPY_FILES += \
-   vendor/pure/prebuilt/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-   vendor/pure/prebuilt/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-endif
-endif
-
 # Stagefright FFMPEG plugin
 ifeq ($(WITH_FFMPEG),true)
 PRODUCT_PACKAGES += \
