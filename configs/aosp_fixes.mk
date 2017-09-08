@@ -34,7 +34,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
      ro.config.notification_sound=Chime.ogg \
      ro.config.alarm_alert=Flow.ogg \
      ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
-     ro.config.ringtone=Zen.ogg
+     ro.config.ringtone=Zen.ogg \
+     persist.sys.disable_rescue=true
 
 # Get some sounds
 $(call inherit-product-if-exists, frameworks/base/data/sounds/GoogleAudio.mk)
