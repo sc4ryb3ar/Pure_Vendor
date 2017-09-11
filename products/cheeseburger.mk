@@ -21,6 +21,9 @@ WITH_OFFICIALOTA := true
 
 # Support Beta OTA Opt-in (Requires additional ota xml)
 #BETA_OTA := true
+#***WORKAROUND FOR THE LONG NAME FOR NOW***
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.ota.BETAmanifest=https://raw.githubusercontent.com/PureFusionOS/PureFusionOTA_SERVER/n-mr2/op5_beta.xml
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
