@@ -28,6 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Chime.ogg \
     ro.config.alarm_alert=Flow.ogg \
     ro.config.ringtone=Zen.ogg
+    ro.carrier=unknown
 endif
 
 # Get some sounds
