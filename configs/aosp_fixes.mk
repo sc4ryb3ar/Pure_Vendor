@@ -13,6 +13,7 @@
 # limitations under the License.
 
 # Google property overides
+ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
     ro.control_privapp_permissions=enforce \
@@ -24,3 +25,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
     ro.setupwizard.rotation_locked=true
+endif
