@@ -380,7 +380,7 @@ echoText "MAKING ZIP FILE"
 NOW=$( date +"%Y-%m-%d-%S" )
 if [[ ${LOG} = true ]]; then
     mkdir -p ${LOG_DIR}
-    time make_command bacon | tee -a ${LOG_DIR}/purenexus_${DEVICE}-${NOW}.log
+    time make_command bacon | tee -a ${LOG_DIR}/purefusion_${DEVICE}-${NOW}.log
 else
     time make_command bacon
 fi
@@ -441,7 +441,7 @@ fi
 echo -e ${RED}"TIME: $( TZ=MST date +%D\ %r | awk '{print toupper($0)}' )"
 echo -e "DURATION: $( format_time ${END} ${START} )"${RST}
 if [[ ${LOG} = true ]]; then
-    echo -e ${RED}"BUILD LOG: ${LOG_DIR}/purenexus_${DEVICE}-${NOW}.log"${RST}
+    echo -e ${RED}"BUILD LOG: ${LOG_DIR}/purefusion_${DEVICE}-${NOW}.log"${RST}
 fi
 
 # Play audible alert that script has ended
