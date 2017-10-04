@@ -102,10 +102,10 @@ if [ $UPLOADFTP -eq 1 ]
 then
     echo " "
     echo "${CLR_BLD_BLU}Uploading...${CLR_RST}"
+    unset sftpStatus
     sh upload-sftp.sh $FTPUSER@$FTPSERVER:$FTPPATH $OUT/$FILENAME $OUT/$MD5SUMNAME
     sh upload-sftp.sh $FTPUSER@$FTPSERVER:$FTPPATH $OUT/$CHANGELOG ||
-    sftpStatus=$?
-    if [ "$sftpStatus" == "" ] || [ "$sftpStatus" -ne 0 ]
+    if [ "$sftpStatus" != "" ]
     then
         echo "${CLR_BLD_RED}Upload failed!${CLR_RST}"
         echo -e ""
