@@ -16,6 +16,10 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# Rescue Party
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.disable_rescue=true
+
 # Allow recording ADB logcat during boot phase
 PRODUCT_PROPERTY_OVERRIDES += \
 		 ro.adb.secure=0 \
