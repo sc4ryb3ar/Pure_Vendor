@@ -16,9 +16,6 @@
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/pure/overlay/common
 
-# Inherit prebuilt apps
-$(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
-
 # Use signing keys for only official builds
 ifeq ($(PURE_BUILD_TYPE),OFFICIAL)
     PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
