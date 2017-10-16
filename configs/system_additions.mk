@@ -38,3 +38,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 		 ro.adb.secure=0 \
 		 ro.secure=0 \
 		 persist.service.adb.enable=1
+
+ifeq ($(TARGET_USES_SNAP_CAMERA),true)
+PRODUCT_PACKAGES += \
+    SnapdragonCamera
+endif
