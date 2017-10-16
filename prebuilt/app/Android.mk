@@ -12,24 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/pure/overlay/common
+LOCAL_PATH := $(call my-dir)
 
-# Inherit prebuilt apps
-$(call inherit-product-if-exists, vendor/gapps/prebuilt.mk)
-
-# Use signing keys for only official builds
-ifeq ($(PURE_BUILD_TYPE),OFFICIAL)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
-endif
-
-# Main Required Packages
-PRODUCT_PACKAGES += \
-    Launcher3 \
-		Turbo \
-    LiveWallpapersPicker
-
-# Custom Packages
-PRODUCT_PACKAGES += \
-    Busybox
+include $(CLEAR_VARS)
+LOCAL_MODULE := Turbo
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := Turbo/Turbo.apk
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_CLASS := APPS
+LOCAL_PRIVILEGED_MODULE := true
+LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+include $(BUILD_PREBUILT)
