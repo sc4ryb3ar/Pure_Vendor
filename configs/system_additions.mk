@@ -31,7 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
 # PureFusionOS OTA
-$(call inherit-product-if-exists, vendor/pure/configs/ota.mk)
+#$(call inherit-product-if-exists, vendor/pure/configs/ota.mk)
 
 # Allow recording ADB logcat during boot phase
 PRODUCT_PROPERTY_OVERRIDES += \
