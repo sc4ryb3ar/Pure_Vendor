@@ -17,6 +17,7 @@ include vendor/pure/configs/bootanimation.mk
 include vendor/pure/configs/pure_main.mk
 include vendor/pure/configs/system_additions.mk
 include vendor/pure/configs/version.mk
+include vendor/pure/configs/telephony.mk
 
 # Telephony packages
 PRODUCT_PACKAGES += \
@@ -30,4 +31,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0
-
