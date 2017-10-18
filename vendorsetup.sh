@@ -13,3 +13,6 @@ add_lunch_combo cheeseburger-eng
 add_lunch_combo gemini-userdebug
 add_lunch_combo gemini-user
 add_lunch_combo gemini-eng
+add_lunch_combo z2_plus-userdebug
+add_lunch_combo z2_plus-user
+add_lunch_combo z2_plus-eng
