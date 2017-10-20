@@ -51,3 +51,15 @@ ifeq ($(TARGET_USES_SNAP_CAMERA),true)
 PRODUCT_PACKAGES += \
     SnapdragonCamera
 endif
+
+# Enable AptX and AptX HD bluetooth codecs
+ifeq ($(APTX_HD),true)
+PRODUCT_COPY_FILES += \
+     vendor/pure/prebuilt/lib/libaptX_encoder.so:system/lib/libaptX_encoder.so \
+     vendor/pure/prebuilt/lib/libaptXHD_encoder.so:system/lib/libaptXHD_encoder.so \
+     vendor/pure/prebuilt/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so \
+     vendor/pure/prebuilt/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.bt.enableAptXHD=true
+endif
