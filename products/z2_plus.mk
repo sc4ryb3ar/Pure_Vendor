@@ -14,7 +14,7 @@
 
 
 # Inherit from z2_plus device
-$(call inherit-product, device/zuk/z2_plus/device.mk)
+$(call inherit-product, device/zuk/z2_plus/aosp_z2_plus.mk)
 
 PRODUCT_NAME := z2_plus
 PRODUCT_DEVICE := z2_plus
