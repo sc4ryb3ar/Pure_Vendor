@@ -24,13 +24,13 @@ endif
 # Main Required Packages
 PRODUCT_PACKAGES += \
     Launcher3 \
-		Messaging \
-		Calculator \
-		DeskClock \
-		Turbo \
-		LatinIME \
-		Gallery2 \
-		WallpaperPicker
+    Messaging \
+    Calculator \
+    DeskClock \
+    Turbo \
+    LatinIME \
+    Gallery2 \
+    WallpaperPicker
 
 
 # Custom Packages
