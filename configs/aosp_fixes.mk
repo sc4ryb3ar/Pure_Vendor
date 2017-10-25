@@ -37,7 +37,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
-     ro.control_privapp_permissions=enforce \
      ro.setupwizard.enterprise_mode=1 \
      ro.carrier=unknown
 endif
