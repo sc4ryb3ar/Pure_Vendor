@@ -30,16 +30,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
      ro.build.selinux=1 \
      persist.sys.dun.override=0 \
      ro.opa.eligible_device=true \
+		 ro.setupwizard.enterprise_mode=1 \
+		 ro.carrier=unknown \
      ro.config.notification_sound=Chime.ogg \
      ro.config.alarm_alert=Flow.ogg \
      ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent \
      ro.config.ringtone=Zen.ogg
-
-ifeq ($(filter marlin sailfish,$(TARGET_PRODUCT)),)
-PRODUCT_PROPERTY_OVERRIDES += \
-     ro.setupwizard.enterprise_mode=1 \
-     ro.carrier=unknown
-endif
 
 # Get some sounds
 $(call inherit-product-if-exists, frameworks/base/data/sounds/GoogleAudio.mk)
