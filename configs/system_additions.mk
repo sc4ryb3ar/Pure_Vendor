@@ -63,3 +63,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
      persist.bt.enableAptXHD=true
 endif
+
+# Pixel experience
+PRODUCT_COPY_FILES += \
+     vendor/pure/prebuilt/etc/sysconfig/dialer_experience.xml:system/etc/sysconfig/dialer_experience.xml \
+     vendor/pure/prebuilt/etc/sysconfig/nexus.xml:system/etc/sysconfig/nexus.xml
