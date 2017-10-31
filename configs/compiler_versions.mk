@@ -13,7 +13,7 @@ ifeq (linux,$(HOST_OS))
   space +=
   AND_CLANG_VERSION := $(subst $(space),-,$(strip $(AND_CLANG_VERSION)))
 
-  ADDITIONAL_BUILD_PROPERTIES += \
+  PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fusion.clang=$(AND_CLANG_VERSION)
 
   AND_SDCLANG_VERSION := $(shell prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64/bin/clang --version | grep "Snapdragon " 2>&1 | cut -d' ' -f 1,5)
@@ -22,7 +22,7 @@ ifeq (linux,$(HOST_OS))
   space +=
   AND_SDCLANG_VERSION := $(subst $(space),-,$(strip $(AND_SDCLANG_VERSION)))
 
-  ADDITIONAL_BUILD_PROPERTIES += \
+  PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fusion.sdclang=$(AND_SDCLANG_VERSION)
 
   ifeq (arm,$(TARGET_ARCH))
@@ -45,7 +45,7 @@ ifeq (linux,$(HOST_OS))
       ARM_AND_PROP := ($(AND_TC_NAME)-$(AND_TC_VERSION_NUMBER))-$(AND_TC_DATE)
     endif
 
-    ADDITIONAL_BUILD_PROPERTIES += \
+    PRODUCT_PROPERTY_OVERRIDES += \
       ro.build.fusion.gcc=$(ARM_AND_PROP)
 
     # ARM-EABI TOOLCHAIN INFO
@@ -71,7 +71,7 @@ ifeq (linux,$(HOST_OS))
       ARM_KERNEL_PROP := ($(KERNEL_TC_NAME)-$(KERNEL_TC_VERSION_NUMBER))-$(KERNEL_TC_DATE)
     endif
 
-    ADDITIONAL_BUILD_PROPERTIES += \
+    PRODUCT_PROPERTY_OVERRIDES += \
       ro.build.fusion.kernel=$(ARM_KERNEL_PROP)
 
   else ifeq (arm64,$(TARGET_ARCH))
@@ -98,7 +98,7 @@ ifeq (linux,$(HOST_OS))
       AARCH64_AND_PROP := ($(UBER_TC_NAME)-$(UBER_TC_VERSION_NUMBER))-$(UBER_TC_DATE)
     endif
 
-    ADDITIONAL_BUILD_PROPERTIES += \
+    PRODUCT_PROPERTY_OVERRIDES += \
       ro.build.fusion.gcc=$(AARCH64_AND_PROP)
   endif
 endif

@@ -21,3 +21,5 @@ PURE_VERSION := $(PLATFORM_VERSION)-$(shell date +%Y%m%d_%H%M%S)-$(PURE_BUILD_TY
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fusion.version=$(PURE_VERSION)
+
+-include vendor/pure/configs/compiler_versions.mk
