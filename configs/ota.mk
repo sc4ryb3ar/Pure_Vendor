@@ -20,10 +20,10 @@ ifeq ($(WITH_OFFICIALOTA),true)
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.ota.romname=PureFusionOS \
         ro.ota.version=$(shell date +"%Y%m%d_%H%M%S") \
-        ro.ota.manifest=https://raw.githubusercontent.com/PureFusionOS/PureFusionOTA_SERVER/n-mr2/$(shell echo "$(TARGET_PRODUCT)".xml)
+        ro.ota.manifest=https://raw.githubusercontent.com/PureFusionOS/PureFusionOTA_SERVER/pf-o/$(shell echo "$(TARGET_PRODUCT)".xml)
 endif
 
 ifeq ($(BETA_OTA),true)
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.ota.BETAmanifest=https://raw.githubusercontent.com/PureFusionOS/PureFusionOTA_SERVER/n-mr2/$(shell echo "$(TARGET_PRODUCT)"_beta.xml)
+        ro.ota.BETAmanifest=https://raw.githubusercontent.com/PureFusionOS/PureFusionOTA_SERVER/pf-o/$(shell echo "$(TARGET_PRODUCT)"_beta.xml)
 endif
