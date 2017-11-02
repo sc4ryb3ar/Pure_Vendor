@@ -26,7 +26,7 @@ sed -i -- 's/'"<CheckMD5"'.\+<\/\CheckMD5>/'"\<CheckMD5>$MD5<\/\CheckMD5>"'/g' $
 echo " "
 
 # Check if variables are unset or empty
-if [ -z "$FILENAME" ] || [ -z "$MD5SUMNAME" ] || [ -z "$CHANGELOG" ] || [ -z "$FILESIZE" ] || [ -z "$MD5" ] || [ -z "$OTA_VERSION" ] || [ -z "$OTA_NUMBER" ]
+if [ -z "$FILENAME" ] || [ -z "$MD5SUMNAME" ] || [ -z "$FILESIZE" ] || [ -z "$MD5" ] || [ -z "$OTA_VERSION" ] || [ -z "$OTA_NUMBER" ]
 then
     echo "${CLR_BLD_RED}Some variables are unset or empty. Exiting...${CLR_RST}"
     exit 1
