@@ -16,7 +16,7 @@ ifeq (linux,$(HOST_OS))
   PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fusion.clang=$(AND_CLANG_VERSION)
 
-  AND_SDCLANG_VERSION := $(shell prebuilts/snapdragon-llvm/toolchains/llvm-Snapdragon_LLVM_for_Android_3.8/prebuilt/linux-x86_64/bin/clang --version | grep "Snapdragon " 2>&1 | cut -d' ' -f 1,5)
+  AND_SDCLANG_VERSION := $(shell $(SDCLANG_PATH)/clang --version | grep "Snapdragon " 2>&1 | cut -d' ' -f 1,5)
 
   space :=
   space +=
