@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+#export SDCLANG_PATH=vendor/qcom/sdclang-4.0/linux-x86/bin
+#export SDCLANG_LTO_DEFS=vendor/pure/sdclang/sdllvm-lto-defs.mk
+
 SDCLANG ?= true
 SDCLANG_FORCED ?= false
 
