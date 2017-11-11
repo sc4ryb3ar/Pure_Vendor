@@ -7,7 +7,7 @@ ifeq (Linux,$(UNAME))
 endif
 
 ifeq (linux,$(HOST_OS))
-  AND_CLANG_VERSION := $(shell prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(LLVM_PREBUILTS_VERSION)/bin/clang --version | grep "clang " 2>&1)
+  AND_CLANG_VERSION := $(shell prebuilts/clang/host/$(HOST_PREBUILT_TAG)/$(PUREFUSIONTC_CLANG)/bin/clang --version | grep "clang " 2>&1)
 
   space :=
   space +=
