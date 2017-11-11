@@ -14,7 +14,7 @@
 
 
 # Inherit AOSP device configuration for axon7
-$(call inherit-product, device/zte/axon7/axon7.mk)
+$(call inherit-product, device/zte/axon7/axon7_axon7.mk)
 
 # Set those variables here to overwrite the inherited values.
 
