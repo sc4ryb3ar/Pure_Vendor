@@ -14,7 +14,7 @@
 
 
 # Inherit AOSP device configuration for axon7
-$(call inherit-product, device/zte/axon7/aosp_axon7.mk)
+$(call inherit-product, device/zte/axon7/axon7.mk)
 
 # Set those variables here to overwrite the inherited values.
 
@@ -26,4 +26,3 @@ PRODUCT_MANUFACTURER := ZTE
 PRODUCT_RELEASE_NAME := axon7
 
 TARGET_VENDOR := zte
-
