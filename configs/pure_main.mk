@@ -17,9 +17,9 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/pure/overlay/common
 
 # Use signing keys for only official builds
-ifeq ($(PURE_BUILD_TYPE),OFFICIAL)
-    PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
-endif
+#ifeq ($(PURE_BUILD_TYPE),OFFICIAL)
+#    PRODUCT_DEFAULT_DEV_CERTIFICATE := ../.keys/releasekey
+#endif
 
 # Main Required Packages
 PRODUCT_PACKAGES += \
@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
 # Storage manager
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.storage_manager.enabled=true
-    
+
 # MusicFX advanced effects
 #TARGET_NO_DSPMANAGER := true
 ifneq ($(TARGET_NO_DSPMANAGER), true)
@@ -48,4 +48,3 @@ PRODUCT_PACKAGES += \
     libcyanogen-dsp \
     audio_effects.conf
 endif
-
