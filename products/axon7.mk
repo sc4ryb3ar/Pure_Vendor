@@ -12,17 +12,39 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+IS_ARM64 := true
+
+# Include Official OTA Package
+WITH_OFFICIALOTA := true
+
+# Support Beta OTA Opt-in (Requires additional ota xml)
+BETA_OTA := true
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit AOSP device configuration for axon7
-$(call inherit-product, device/zte/axon7/aosp_axon7.mk)
+$(call inherit-product, device/zte/axon7/seven.mk)
 
-# Set those variables here to overwrite the inherited values.
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/pure/configs/pure_phone.mk)
 
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := axon7
-PRODUCT_NAME := axon7
+PRODUCT_NAME := aosp_axon7
 PRODUCT_BRAND := ZTE
-PRODUCT_MODEL := ZTE AXON 7
+PRODUCT_MODEL := ZTE A2017U
 PRODUCT_MANUFACTURER := ZTE
 PRODUCT_RELEASE_NAME := axon7
 
 TARGET_VENDOR := zte
+
+# Pure Fusion OS OnePlus3 Maintainer
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="sc4ryb3ar"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+PRODUCT_NAME="P996A01_N" \
+BUILD_FINGERPRINT="ZTE/P996A01_N/ailsa_ii:7.0/NRD90M/20170128.052618:user/release-keys" \
+PRIVATE_BUILD_DESC="P996A01_N-user 7.0 NRD90M 20170128.052618 release-keys"
